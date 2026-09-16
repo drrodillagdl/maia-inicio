@@ -29,12 +29,12 @@ body{
 
 /* ── Encabezado ─────────────────────────────────── */
 header{text-align:center;padding:28px 0 40px}
-.marca{display:inline-flex;align-items:center;gap:16px}
-.marca svg{width:72px;height:72px;display:block}
-.nombre{font-size:44px;font-weight:600;letter-spacing:-.02em;line-height:1}
+.marca{display:flex;flex-direction:column;align-items:center;gap:22px}
+.marca svg{width:96px;height:96px;display:block}
+.nombre{font-size:46px;font-weight:500;letter-spacing:.20em;line-height:1;text-indent:.20em}
 .descriptor{
   font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--ink-3); margin-top:18px;
+  color:var(--ink-3); margin-top:20px; line-height:1.75;
 }
 
 /* ── Rejilla de apps ────────────────────────────── */
@@ -67,8 +67,8 @@ footer{text-align:center;margin-top:44px;font-family:var(--mono);font-size:10px;
 
 @media (max-width:520px){
   header{padding:12px 0 32px}
-  .marca svg{width:60px;height:60px}
-  .nombre{font-size:36px}
+  .marca svg{width:76px;height:76px}
+  .nombre{font-size:38px}
   .rejilla{grid-template-columns:1fr}
   .app{padding:15px 16px;gap:14px}
   .app svg{width:56px;height:56px;flex-basis:56px}
@@ -86,11 +86,13 @@ footer{text-align:center;margin-top:44px;font-family:var(--mono);font-size:10px;
         </g>
         <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"/>
         <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"/>
-        <circle cx="74.5" cy="70.5" r="14.5" fill="#FFFEFB"/>
+        <!-- El tercer nodo de la marca madre va azul: es el nodo SIN ASIGNAR,
+             el que cada aplicación reemplaza con su forma y su color. -->
+        <circle cx="74.5" cy="70.5" r="14.5" fill="#6E9BF0"/>
       </svg>
       <div class="nombre">MAIA</div>
     </div>
-    <div class="descriptor">Medicina Asistida por Inteligencia Artificial</div>
+    <div class="descriptor">Medicina asistida<br>por inteligencia artificial</div>
   </header>
 
   <main class="rejilla">
@@ -161,7 +163,7 @@ footer{text-align:center;margin-top:44px;font-family:var(--mono);font-size:10px;
 
 
     <a class="app pendiente" href="#">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFFEFB" stroke-width="5.5" fill="none"><line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line></g><circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle><circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle><circle cx="74.5" cy="70.5" r="14.5" fill="#FFFEFB" opacity=".45"></circle></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#1B9388"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M12 1.6a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8z"></path><path d="M12 12.9c5 0 9 3.3 9 7.4V23H3v-2.7c0-4.1 4-7.4 9-7.4z"></path></g></svg>
       <div class="texto">
         <div class="titulo"><b>MAIA</b> <span>Expediente</span><i class="etiqueta">En obra</i></div>
         <div class="que">El expediente cl&iacute;nico, n&uacute;cleo de todo lo dem&aacute;s</div>
