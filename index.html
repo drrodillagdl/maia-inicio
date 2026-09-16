@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#17181A">
+<title>MAIA</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MAIA">
+<style>
+:root{
+  --ink:#FFFEFB; --ink-2:rgba(255,254,251,.62); --ink-3:rgba(255,254,251,.38);
+  --fondo:#17181A; --tarjeta:#22252B; --borde:rgba(255,254,251,.10);
+  --ui:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--fondo); color:var(--ink); font-family:var(--ui);
+  -webkit-font-smoothing:antialiased; min-height:100dvh;
+  padding:max(28px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom));
+}
+.envoltura{max-width:920px;margin:0 auto}
+
+/* ── Encabezado ─────────────────────────────────── */
+header{text-align:center;padding:28px 0 40px}
+.marca{display:inline-flex;align-items:center;gap:16px}
+.marca svg{width:72px;height:72px;display:block}
+.nombre{font-size:44px;font-weight:600;letter-spacing:-.02em;line-height:1}
+.descriptor{
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-3); margin-top:18px;
+}
+
+/* ── Rejilla de apps ────────────────────────────── */
+.rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.app{
+  display:flex;align-items:center;gap:16px;
+  background:var(--tarjeta); border:1px solid var(--borde); border-radius:16px;
+  padding:18px 20px; text-decoration:none; color:inherit;
+  transition:border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.app:hover{border-color:rgba(255,254,251,.28);transform:translateY(-2px)}
+.app:active{transform:translateY(0)}
+.app svg{width:64px;height:64px;flex:0 0 64px}
+.texto{min-width:0}
+.titulo{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:3px}
+.titulo b{font-weight:600}
+.titulo span{font-weight:400;color:var(--ink-2)}
+.que{font-size:13px;line-height:1.35;color:var(--ink-3)}
+
+/* ── Las que aún no existen ─────────────────────── */
+.app.pendiente{opacity:.42;pointer-events:none}
+.etiqueta{
+  font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);border:1px solid var(--borde);border-radius:5px;
+  padding:2px 6px;margin-left:8px;vertical-align:1px;white-space:nowrap;
+}
+
+footer{text-align:center;margin-top:44px;font-family:var(--mono);font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+@media (max-width:520px){
+  header{padding:12px 0 32px}
+  .marca svg{width:60px;height:60px}
+  .nombre{font-size:36px}
+  .rejilla{grid-template-columns:1fr}
+  .app{padding:15px 16px;gap:14px}
+  .app svg{width:56px;height:56px;flex-basis:56px}
+}
+</style>
+</head>
+<body>
+<div class="envoltura">
+
+  <header>
+    <div class="marca">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="#FFFEFB" stroke-width="5.5" fill="none">
+          <line x1="50" y1="26" x2="26" y2="70"/><line x1="50" y1="26" x2="74" y2="70"/><line x1="26" y1="70" x2="74" y2="70"/>
+        </g>
+        <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"/>
+        <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"/>
+        <circle cx="74.5" cy="70.5" r="14.5" fill="#FFFEFB"/>
+      </svg>
+      <div class="nombre">MAIA</div>
+    </div>
+    <div class="descriptor">Medicina Asistida por Inteligencia Artificial</div>
+  </header>
+
+  <main class="rejilla">
+
+    <a class="app" href="https://documentos.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#7A4B9A"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path fill-rule="evenodd" d="M5.5 1h13v22h-13zM8.4 5.6h7.2v2.6H8.4zM8.4 10.7h7.2v2.6H8.4zM8.4 15.8h4.6v2.6H8.4z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Documentos</span></div>
+        <div class="que">Recetas, indicaciones e informes con tu membrete</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://informes.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#2E69B2"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M2.5 12.3 5.2 9.4 9.6 13.6 18.8 4 21.5 6.9 9.6 19.4z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Informes</span></div>
+        <div class="que">Los informes que piden las aseguradoras</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://pendientes.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#C75B90"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M3 1.5h18v3H3zM3 19.5h18v3H3zM5.2 5.2h13.6L12 11.7zM12 12.9l6.8 6.1H5.2z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Pendientes</span></div>
+        <div class="que">Qué falta de cada caso y de cada paciente</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://gestion.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#318F5A"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M10.4 1.5h3.2v2.1h4.2v3.2h-4.2v3.6h1.1c2.6 0 4.6 1.9 4.6 4.6s-2 4.9-4.6 4.9h-1.1v2.6h-3.2v-2.6H5.9v-3.2h4.5V13.5H9.3c-2.6 0-4.6-1.9-4.6-4.6s2-4.9 4.6-4.9h1.1zm0 5.3H9.3c-.8 0-1.4.8-1.4 1.8s.6 1.5 1.4 1.5h1.1zm3.2 6.7v3.3h1.1c.8 0 1.4-.8 1.4-1.8s-.6-1.5-1.4-1.5z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Gestión</span></div>
+        <div class="que">Trámites con aseguradoras, facturación y dinero</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://escalas.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#007187"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M2.5 14.5h4.6v8H2.5zM9.7 8.5h4.6v14H9.7zM16.9 1.5h4.6v21h-4.6z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Escalas</span></div>
+        <div class="que">IKDC, Lysholm, KOOS y WOMAC, en el iPad</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://lecturas.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#945A00"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path fill-rule="evenodd" d="M1 4.5h9.6v15H1zM13.4 4.5H23v15h-9.6z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Lecturas</span></div>
+        <div class="que">Lo nuevo de trauma y ortopedia, resumido</div>
+      </div>
+    </a>
+
+    <a class="app" href="https://nutricion.maiaconsultorio.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#73A434"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M21.8 2.2C21.8 12.3 14.4 19.7 4.3 19.7 4.3 9.6 11.7 2.2 21.8 2.2z"></path><path d="M1.4 20.1 3.5 18 6.3 20.8 4.2 22.9z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Nutrición</span></div>
+        <div class="que">Peso, composición corporal y alimentación</div>
+      </div>
+    </a>
+
+    <a class="app pendiente" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <g stroke="#FFFEFB" stroke-width="5.5" fill="none">  <line x1="50" y1="26" x2="26" y2="70"></line><line x1="50" y1="26" x2="74" y2="70"></line><line x1="26" y1="70" x2="74" y2="70"></line> </g> <circle cx="50" cy="26" r="11.5" fill="#FFFEFB"></circle> <circle cx="26" cy="70" r="11.5" fill="#FFFEFB"></circle> <circle cx="74.5" cy="70.5" r="14.5" fill="#AA442B"></circle> <g transform="translate(65.3 61.3) scale(0.7667)" fill="#14161A"><path d="M4.7 20.1 7.3 21.9 19.3 3.9 16.7 2.1z"></path><path d="M18.2 14.3 16.6 16.9 5.8 9.7 7.4 7.2z"></path></g></svg>
+      <div class="texto">
+        <div class="titulo"><b>MAIA</b> <span>Ejes</span><i class="etiqueta">En obra</i></div>
+        <div class="que">Planeación del eje y guía impresa en 3D</div>
+      </div>
+    </a>
+
+  </main>
+
+  <footer>Consultorio del Dr. Israel Romo</footer>
+</div>
+</body>
+</html>
